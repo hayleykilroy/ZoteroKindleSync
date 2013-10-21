@@ -27,9 +27,9 @@ file.copy(as.character(files.to.copy),paste(kindle.path,"documents",sep=""))
 # get PDFs sorted by Zotero collection
 z.sql = dbConnect("SQLite",paste(zot.path,"zotero.sqlite",sep=""))
 z.query = dbGetQuery(z.sql,"SELECT collectionName, path FROM collections, collectionItems, itemAttachments WHERE collections.collectionID = collectionItems.collectionID AND collectionItems.itemID = itemAttachments.sourceItemID")
-z.query.pdfs = z.query[grepl(".*pdf$", z.query$path)==T,]
+z.query.pdfs = z.query[grepl(".*pdf$", z.query$path),]
 z.query.pdfs$path = sub("storage:", "",z.query.pdfs$path,perl=T)
-z.query.pdfs = z.query.pdfs[z.query.pdfs$path %in% basename(zot.pdf)==T,]
+z.query.pdfs = z.query.pdfs[z.query.pdfs$path %in% basename(zot.pdf),]
 
 # get Zotero collection names
 z.collections = sort(unique(unlist(z.query.pdfs$collectionName, use.names = FALSE)))
