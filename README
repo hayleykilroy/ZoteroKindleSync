@@ -1,1 +1,7 @@
-This script was written for Kindle 3, though it will likely work on any version except Kindle 1, Kindle Touch, and Kindle Fire.  This script edits the Kindle's collections.json file, a hidden system file.  Please be aware that this may void your warranty or create problems with your Kindle.
+This script will copy PDFs and folder organization from Zotero Collections to Kindle Collections. This script edits the Kindle's collections.json file, a hidden system file.  Please be aware that this may void your warranty or create problems with your Kindle.
+
+Original version by HayleyKilroy written for Kindle 3. Updated version tested on Kindle DX.  The script should also work on other e-reader Kindle models, except for Kindle 1 and Touch (e.g., it won't work on Fire tablets).
+
+To run the script, you need to modify the two paths (to your Zotero installation and to your Kindle) and the language setting to match your environment. If Zotero is installed to your Firefox profile folder, you may need to close Firefox before your Zotero database is readable.
+
+After you run the script, you need to hard-reset your Kindle by holding the power switch for 20 seconds.
